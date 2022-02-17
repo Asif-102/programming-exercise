@@ -3,5 +3,5 @@
 
 int main(void)
 {
-    printf("A 32-bit integer can store %li possibldf \n", (long) pow(2, 32));
+    printf("A 32-bit integer can store %li possibl \n", (long) pow(2, 32));
 }
