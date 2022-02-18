@@ -1,34 +1,45 @@
 #include <stdio.h>
 
+int GCD(int num1, int num2);
+
 int main(void)
 {
-    int a, b, tmp;
+    int a, b;
     scanf("%d %d", &a, &b);
 
-    if(a < b)
+    int gcd = GCD(a, b);
+
+    printf("GCD is : %d\n", gcd);
+    
+}
+
+int GCD(int num1, int num2)
+{
+    int tmp;
+    if(num1 < num2)
     {
-        tmp = a;
-        a = b;
-        b = tmp;
+        tmp = num1;
+        num2 = num1;
+        num1 = tmp;
     }
 
-    while (a != b)
+    while (num1 != num2)
     {
-        if(b == 0)
+        if(num2 == 0)
         {
             break;
         }
 
-        if(a > b)
+        if(num1 > num2)
         {
-            a = a - b;
+            num1 -= num2;
         }
         else
         {
-            b = b - a;
+            num2 -= num1;
         }
     }
 
-    printf("GCD is : %d\n", a);
+    return num1;
     
 }
