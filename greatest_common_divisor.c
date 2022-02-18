@@ -15,12 +15,11 @@ int main(void)
 
 int GCD(int num1, int num2)
 {
-    int tmp;
     if(num1 < num2)
     {
-        tmp = num1;
-        num2 = num1;
-        num1 = tmp;
+        num1 += num2;
+        num2 = num1 - num2;
+        num1 = num1 - num2;
     }
 
     while (num1 != num2)
