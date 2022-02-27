@@ -5,7 +5,8 @@ int main(void)
 {
     char password[10];
 
-    scanf("%s", &password);
+    // scanf("%s", &password);
+    gets(password);
 
     int extendRange;
     scanf("%d", &extendRange);
