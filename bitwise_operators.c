@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-
 void toBinary(unsigned int val, char str[], int k)
 {
     for(int i = 0; i < k; i++)
