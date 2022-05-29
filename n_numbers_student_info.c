@@ -62,7 +62,7 @@ int main(void)
     printf("Number of students in the class: ");
     scanf("%d", &n);
 
-    struct Student students[n];
+    struct Student students[n]; //struct array
 
     for(int i = 0; i < n; i++)
     {
