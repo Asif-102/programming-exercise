@@ -24,6 +24,15 @@ int main(void)
 
     for (int i = 0; i < days; i++)
     {
+        if((nextDate.year % 4 == 0 && nextDate.year % 100 != 0) || nextDate.year % 400 == 0)
+        {
+            daysInMonths[1] = 29;
+        }
+        else
+        {
+            daysInMonths[1] = 28;
+        }
+        
         if (nextDate.day != daysInMonths[nextDate.month - 1])
         {
             nextDate.day++;
